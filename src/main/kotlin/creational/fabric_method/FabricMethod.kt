@@ -2,7 +2,7 @@ package team.idivision.samples.designpatterns.creational.fabric_method
 
 import team.idivision.samples.designpatterns.Pattern
 import team.idivision.samples.designpatterns.creational.fabric_method.dialog.AlertDialog
-import team.idivision.samples.designpatterns.creational.fabric_method.dialog.Dialog
+import team.idivision.samples.designpatterns.creational.fabric_method.abstraction.Dialog
 import team.idivision.samples.designpatterns.creational.fabric_method.dialog.PrompDialog
 
 
