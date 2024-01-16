@@ -1,4 +1,4 @@
-package team.idivision.samples.designpatterns.creational.fabric_method.model
+package team.idivision.samples.designpatterns.creational.fabric_method.button
 
 import team.idivision.samples.designpatterns.creational.fabric_method.abstraction.Button
 

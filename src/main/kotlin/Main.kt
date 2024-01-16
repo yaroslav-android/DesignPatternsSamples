@@ -1,5 +1,6 @@
 package team.idivision.samples.designpatterns
 
+import team.idivision.samples.designpatterns.creational.abstract_factory.AbstractFactory
 import team.idivision.samples.designpatterns.creational.fabric_method.FabricMethod
 
 
@@ -16,10 +17,11 @@ private fun launchCreationalPatterns() {
 
     val patterns: List<Pattern> = listOf(
         FabricMethod(isPromotionNotification = false),
+        AbstractFactory(tier = "t2"),
     )
 
     patterns.forEach { pattern ->
-        println("Pattern: ${pattern.name()}")
+        println("\nPattern: ${pattern.name()}")
         pattern.launch()
     }
 }
