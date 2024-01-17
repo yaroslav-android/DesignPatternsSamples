@@ -10,7 +10,7 @@ class SquarePegAdapter(
 ) {
     fun asRoundPeg(): RoundPeg {
         return RoundPeg(
-            (peg.length * sqrt(2.0) / 2)
+            (peg.length / 2) * sqrt(2.0)
         )
     }
 }
