@@ -10,6 +10,7 @@ import team.idivision.samples.designpatterns.structural.bridge.Bridge
 import team.idivision.samples.designpatterns.structural.bridge.sender.SenderType
 import team.idivision.samples.designpatterns.structural.composite.Composite
 import team.idivision.samples.designpatterns.structural.decorator.Decorator
+import team.idivision.samples.designpatterns.structural.facade.Facade
 
 
 fun main() {
@@ -54,6 +55,7 @@ private fun launchStructuralPatterns() {
             Bridge(senderType = SenderType.EMAIL),
             Composite(),
             Decorator(),
+            Facade(),
         ),
     )
 }
