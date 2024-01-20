@@ -4,7 +4,7 @@ import team.idivision.samples.designpatterns.structural.bridge.abstraction.Abstr
 import team.idivision.samples.designpatterns.structural.bridge.abstraction.MessageSender
 
 
-class LongMessage(sender: MessageSender): AbstractMessage(sender = sender) {
+class LongMessage(sender: MessageSender) : AbstractMessage(sender = sender) {
     override fun sendMessage(msg: String) {
         sender.sendMessage(msg)
     }

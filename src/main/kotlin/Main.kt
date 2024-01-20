@@ -8,6 +8,7 @@ import team.idivision.samples.designpatterns.creational.singleton.Singleton
 import team.idivision.samples.designpatterns.structural.adapter.Adapter
 import team.idivision.samples.designpatterns.structural.bridge.Bridge
 import team.idivision.samples.designpatterns.structural.bridge.sender.SenderType
+import team.idivision.samples.designpatterns.structural.composite.Composite
 
 
 fun main() {
@@ -15,6 +16,8 @@ fun main() {
     launchStructuralPatterns()
     // TODO: Behavioral
     // launchBehavioralPatterns()
+
+    // TODO: Add for each pattern documentation on how each combines.
 }
 
 private fun launchPatterns(
@@ -48,6 +51,7 @@ private fun launchStructuralPatterns() {
         patterns = listOf(
             Adapter(),
             Bridge(senderType = SenderType.EMAIL),
+            Composite()
         ),
     )
 }
