@@ -1,5 +1,6 @@
 package team.idivision.samples.designpatterns
 
+import team.idivision.samples.designpatterns.behavioral.chain_of_responsibility.ChainOfResponsibility
 import team.idivision.samples.designpatterns.creational.abstract_factory.AbstractFactory
 import team.idivision.samples.designpatterns.creational.builder.Builder
 import team.idivision.samples.designpatterns.creational.fabric_method.FabricMethod
@@ -66,6 +67,8 @@ private fun launchStructuralPatterns() {
 private fun launchBehavioralPatterns() {
     launchPatterns(
         group = "Behavioral",
-        patterns = listOf(),
+        patterns = listOf(
+            ChainOfResponsibility(),
+        ),
     )
 }
