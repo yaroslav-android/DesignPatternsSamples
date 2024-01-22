@@ -12,6 +12,7 @@ import team.idivision.samples.designpatterns.structural.composite.Composite
 import team.idivision.samples.designpatterns.structural.decorator.Decorator
 import team.idivision.samples.designpatterns.structural.facade.Facade
 import team.idivision.samples.designpatterns.structural.flyweight.Flyweight
+import team.idivision.samples.designpatterns.structural.proxy.Proxy
 
 
 fun main() {
@@ -58,6 +59,7 @@ private fun launchStructuralPatterns() {
             Decorator(),
             Facade(),
             Flyweight(),
+            Proxy()
         ),
     )
 }
