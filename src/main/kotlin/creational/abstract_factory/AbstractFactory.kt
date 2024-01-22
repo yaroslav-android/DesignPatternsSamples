@@ -19,8 +19,7 @@ import team.idivision.samples.designpatterns.creational.abstract_factory.factory
  */
 class AbstractFactory(
     private val tier: String = "t1"
-) : Pattern {
-    override fun name(): String = "AbstractFactory"
+) : Pattern("AbstractFactory") {
 
     override fun launch() {
         val lootFactory: LootFactory = if (tier == "t1") {

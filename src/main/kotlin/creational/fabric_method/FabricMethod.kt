@@ -17,8 +17,7 @@ import team.idivision.samples.designpatterns.creational.fabric_method.dialog.Pro
  */
 class FabricMethod(
     private val isPromotionNotification: Boolean = false
-) : Pattern {
-    override fun name(): String = "FabricMethod"
+) : Pattern("FabricMethod") {
 
     override fun launch() {
         val dialog: Dialog = if (isPromotionNotification) {

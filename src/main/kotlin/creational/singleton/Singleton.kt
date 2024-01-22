@@ -11,8 +11,7 @@ import team.idivision.samples.designpatterns.Pattern
  * - when the sole instance should be extensible by subclassing, and clients should be able to use
  *      an extended instance without modifying their code.
  */
-class Singleton : Pattern {
-    override fun name(): String = "Singleton"
+class Singleton : Pattern("Singleton") {
 
     override fun launch() {
         println("Documentation only")

@@ -25,8 +25,7 @@ import team.idivision.samples.designpatterns.structural.proxy.image.ImageProxy
  *      - loading a persistent object into memory when it's first referenced. o checking that the real object
  *      is locked before it's accessed to ensure that no other object can change it.
  */
-class Proxy : Pattern {
-    override fun name(): String = "Proxy"
+class Proxy : Pattern("Proxy") {
 
     override fun launch() {
         val document = TextDocument()

@@ -21,8 +21,7 @@ import team.idivision.samples.designpatterns.structural.facade.user.User
  *      If subsystems are dependent, then you can simplify the dependencies between them by making them
  *      communicate with each other solely through their facades.
  */
-class Facade : Pattern {
-    override fun name(): String = "Facade"
+class Facade : Pattern("Facade") {
 
     override fun launch() {
         val user = User(email = "user@example.com")

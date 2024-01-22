@@ -15,8 +15,7 @@ import team.idivision.samples.designpatterns.structural.decorator.ui.TextView
  *      are possible and would produce an explosion of subclasses to support every combination.
  *      Or a class definition may be hidden or otherwise unavailable for subclassing.
  */
-class Decorator : Pattern {
-    override fun name(): String = "Decorator"
+class Decorator : Pattern("Decorator") {
 
     override fun launch() {
         val text = TextView()

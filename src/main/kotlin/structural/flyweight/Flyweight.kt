@@ -18,8 +18,7 @@ import java.awt.Color
  * - The application doesn't depend on object identity. Since flyweight objects may be shared,
  *      identity tests will return true for conceptually distinct objects.
  */
-class Flyweight : Pattern {
-    override fun name(): String = "Flyweight"
+class Flyweight : Pattern("Flyweight") {
 
     override fun launch() {
         val factory = ShapeFactory()

@@ -15,8 +15,7 @@ import team.idivision.samples.designpatterns.Pattern
  *    It may be more convenient to install a corresponding number of prototypes and clone them rather than
  *    instantiating the class manually, each time with the appropriate state.
  */
-class Prototype : Pattern {
-    override fun name(): String = "Prototype"
+class Prototype : Pattern("Prototype") {
 
     override fun launch() {
         println("Documentation only")

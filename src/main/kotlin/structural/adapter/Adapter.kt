@@ -17,8 +17,7 @@ import team.idivision.samples.designpatterns.structural.adapter.shape.RoundHole
  * - (object adapter only) you need to use several existing subclasses, but it's impractical to adapt
  *      their interface by subclassing every one. An object adapter can adapt the interface of its parent class.
  */
-class Adapter : Pattern {
-    override fun name(): String = "Adapter"
+class Adapter : Pattern("Adapter") {
 
     override fun launch() {
         val roundHole = RoundHole(3.0)

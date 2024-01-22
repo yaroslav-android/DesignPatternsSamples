@@ -6,8 +6,7 @@ import team.idivision.samples.designpatterns.creational.builder.model.Salad
 import team.idivision.samples.designpatterns.creational.builder.model.Soup
 
 
-class Builder : Pattern {
-    override fun name(): String = "Builder"
+class Builder : Pattern("Builder") {
 
     override fun launch() {
         val menuBuilder: MenuBuilder = MenuBuilder()

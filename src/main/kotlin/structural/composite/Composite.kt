@@ -11,8 +11,7 @@ import team.idivision.samples.designpatterns.structural.composite.pc.*
  * - you want clients to be able to ignore the difference between compositions of objects and individual objects.
  *      Clients will treat all objects in the composite structure uniformly.
  */
-class Composite : Pattern {
-    override fun name(): String = "Composite"
+class Composite : Pattern("Composite") {
 
     override fun launch() {
         val pc = Cabinet(name = "NZXT 510A")

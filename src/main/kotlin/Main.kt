@@ -18,8 +18,7 @@ import team.idivision.samples.designpatterns.structural.proxy.Proxy
 fun main() {
     launchCreationalPatterns()
     launchStructuralPatterns()
-    // TODO: Behavioral
-    // launchBehavioralPatterns()
+    launchBehavioralPatterns()
 
     // TODO: Add for each pattern documentation on how each combines.
 }
@@ -31,7 +30,7 @@ private fun launchPatterns(
     println("\n---------- $group Patterns ----------")
 
     patterns.forEach { pattern ->
-        println("\nPattern: ${pattern.name()}")
+        println("\nPattern: ${pattern.name}")
         pattern.launch()
     }
 }
@@ -61,5 +60,12 @@ private fun launchStructuralPatterns() {
             Flyweight(),
             Proxy()
         ),
+    )
+}
+
+private fun launchBehavioralPatterns() {
+    launchPatterns(
+        group = "Behavioral",
+        patterns = listOf(),
     )
 }

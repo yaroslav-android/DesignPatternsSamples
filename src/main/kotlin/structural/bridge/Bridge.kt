@@ -30,8 +30,7 @@ import team.idivision.samples.designpatterns.structural.bridge.sender.SmsMessage
  */
 class Bridge(
     private val senderType: SenderType = SenderType.SMS,
-) : Pattern {
-    override fun name(): String = "Bridge"
+) : Pattern("Bridge") {
 
     override fun launch() {
         val sender: MessageSender = if (senderType == SenderType.EMAIL) {
