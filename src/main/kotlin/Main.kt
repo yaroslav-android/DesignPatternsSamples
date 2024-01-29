@@ -15,6 +15,7 @@ import team.idivision.samples.designpatterns.structural.decorator.Decorator
 import team.idivision.samples.designpatterns.structural.facade.Facade
 import team.idivision.samples.designpatterns.structural.flyweight.Flyweight
 import team.idivision.samples.designpatterns.structural.proxy.Proxy
+import team.idivision.samples.designpatterns.behavioral.iterator.Iterator as IteratorPattern
 
 
 fun main() {
@@ -70,7 +71,8 @@ private fun launchBehavioralPatterns() {
         group = "Behavioral",
         patterns = listOf(
             ChainOfResponsibility(),
-            Command()
+            Command(),
+            IteratorPattern(),
         ),
     )
 }
