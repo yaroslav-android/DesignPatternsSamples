@@ -5,6 +5,7 @@ import team.idivision.samples.designpatterns.behavioral.command.Command
 import team.idivision.samples.designpatterns.behavioral.mediator.Mediator
 import team.idivision.samples.designpatterns.behavioral.moment.Momento
 import team.idivision.samples.designpatterns.behavioral.observer.Observer
+import team.idivision.samples.designpatterns.behavioral.state.State
 import team.idivision.samples.designpatterns.creational.abstract_factory.AbstractFactory
 import team.idivision.samples.designpatterns.creational.builder.Builder
 import team.idivision.samples.designpatterns.creational.fabric_method.FabricMethod
@@ -79,6 +80,7 @@ private fun launchBehavioralPatterns() {
             Mediator(),
             Momento(),
             Observer(),
+            State(),
         ),
     )
 }
