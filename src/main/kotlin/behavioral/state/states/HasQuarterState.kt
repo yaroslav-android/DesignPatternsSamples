@@ -6,16 +6,18 @@ import team.idivision.samples.designpatterns.behavioral.state.machine.GumballMac
 
 class HasQuarterState : AbstractState() {
 
+    override fun insertQuarter(gumballMachine: GumballMachine) {
+        println("You can't insert another quarter.")
+    }
+
     override fun ejectQuarter(gumballMachine: GumballMachine) {
+        println("Quarter returned.")
         gumballMachine.setState(NoQuarterState())
     }
 
     override fun turnCrank(gumballMachine: GumballMachine) {
-        if (gumballMachine.getGumballCount() > 0) {
-            gumballMachine.setState(SoldState())
-        } else {
-            gumballMachine.setState(SoldOutState())
-        }
+        println("You turned...")
+        gumballMachine.setState(SoldState())
     }
 
     override fun dispense(gumballMachine: GumballMachine) {
