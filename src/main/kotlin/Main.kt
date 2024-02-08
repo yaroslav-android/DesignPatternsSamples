@@ -28,8 +28,6 @@ fun main() {
     launchCreationalPatterns()
     launchStructuralPatterns()
     launchBehavioralPatterns()
-
-    // TODO: Add for each pattern documentation on how each combines.
 }
 
 private fun launchPatterns(
