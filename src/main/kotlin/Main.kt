@@ -1,88 +1,42 @@
 package team.idivision.samples.designpatterns
 
-import team.idivision.samples.designpatterns.behavioral.chain_of_responsibility.ChainOfResponsibility
-import team.idivision.samples.designpatterns.behavioral.command.Command
-import team.idivision.samples.designpatterns.behavioral.mediator.Mediator
-import team.idivision.samples.designpatterns.behavioral.moment.Momento
-import team.idivision.samples.designpatterns.behavioral.observer.Observer
-import team.idivision.samples.designpatterns.behavioral.state.State
-import team.idivision.samples.designpatterns.behavioral.strategy.Strategy
-import team.idivision.samples.designpatterns.behavioral.visitor.Visitor
-import team.idivision.samples.designpatterns.creational.abstract_factory.AbstractFactory
-import team.idivision.samples.designpatterns.creational.builder.Builder
-import team.idivision.samples.designpatterns.creational.fabric_method.FabricMethod
-import team.idivision.samples.designpatterns.creational.prototype.Prototype
-import team.idivision.samples.designpatterns.creational.singleton.Singleton
-import team.idivision.samples.designpatterns.structural.adapter.Adapter
-import team.idivision.samples.designpatterns.structural.bridge.Bridge
-import team.idivision.samples.designpatterns.structural.bridge.sender.SenderType
-import team.idivision.samples.designpatterns.structural.composite.Composite
-import team.idivision.samples.designpatterns.structural.decorator.Decorator
-import team.idivision.samples.designpatterns.structural.facade.Facade
-import team.idivision.samples.designpatterns.structural.flyweight.Flyweight
-import team.idivision.samples.designpatterns.structural.proxy.Proxy
-import team.idivision.samples.designpatterns.behavioral.iterator.Iterator as IteratorPattern
+import team.idivision.samples.designpatterns.factory.BehavioralPatternFactory
+import team.idivision.samples.designpatterns.factory.CreationalPatternFactory
+import team.idivision.samples.designpatterns.factory.PatternFactory
+import team.idivision.samples.designpatterns.factory.StructuralPatternFactory
+import team.idivision.samples.designpatterns.patterns.Pattern
+import team.idivision.samples.designpatterns.patterns.PatternGroup
+import team.idivision.samples.designpatterns.patterns.PrintablePattern
+import team.idivision.samples.designpatterns.patterns.launchGroup
 
 
 fun main() {
-    launchCreationalPatterns()
-    launchStructuralPatterns()
-    launchBehavioralPatterns()
-}
+    val creationalPatterns: PatternFactory = CreationalPatternFactory()
+    val structuralPatterns: PatternFactory = StructuralPatternFactory()
+    val behavioralPatterns: PatternFactory = BehavioralPatternFactory()
 
-private fun launchPatterns(
-    group: String,
-    patterns: List<Pattern>,
-) {
-    println("\n---------- $group Patterns ----------")
-
-    patterns.forEach { pattern ->
-        println("\nPattern: ${pattern.name}")
-        pattern.launch()
+    val printPatternScope = object : PrintablePattern<Pattern> {
+        override fun Pattern.print() {
+            println("--- START $name")
+            launch()
+            println("--- END $name\n")
+        }
     }
-}
 
-private fun launchCreationalPatterns() {
-    launchPatterns(
-        group = "Creational",
-        patterns = listOf(
-            FabricMethod(isPromotionNotification = false),
-            AbstractFactory(tier = "t2"),
-            Builder(),
-            Singleton(),
-            Prototype(),
-        ),
-    )
-}
+    with(printPatternScope) {
+        launchGroup(
+            group = PatternGroup.Creational,
+            factory = creationalPatterns,
+        )
 
-private fun launchStructuralPatterns() {
-    launchPatterns(
-        group = "Structural",
-        patterns = listOf(
-            Adapter(),
-            Bridge(senderType = SenderType.EMAIL),
-            Composite(),
-            Decorator(),
-            Facade(),
-            Flyweight(),
-            Proxy()
-        ),
-    )
-}
+        launchGroup(
+            group = PatternGroup.Structural,
+            factory = structuralPatterns,
+        )
 
-private fun launchBehavioralPatterns() {
-    launchPatterns(
-        group = "Behavioral",
-        patterns = listOf(
-            ChainOfResponsibility(),
-            Command(),
-            IteratorPattern(),
-            Mediator(),
-            Momento(),
-            Observer(),
-            State(),
-            Strategy(),
-            Visitor(),
-        ),
-    )
+        launchGroup(
+            group = PatternGroup.Behavioral,
+            factory = behavioralPatterns,
+        )
+    }
 }

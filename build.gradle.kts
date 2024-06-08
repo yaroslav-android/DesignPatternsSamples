@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.9.21"
+    kotlin("jvm") version "2.0.0"
 }
 
 group = "team.idivision.samples.designpatterns"
@@ -16,6 +16,11 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
 kotlin {
     jvmToolchain(20)
+
+    compilerOptions {
+        freeCompilerArgs.add("-Xcontext-receivers")
+    }
 }
