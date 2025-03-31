@@ -5,13 +5,13 @@
 > **Note:** Patterns with [x] mark excluded from code samples due to simplicity or specific nature of the
 > implementation.
 
-- <a href="#creational_patterns">Creational Patterns (5)</a>
+- <a href="#creational_patterns">Creational Patterns (5)</a> | [↗ sources](https://github.com/yaroslav-android/DesignPatternsSamples/tree/master/src/main/kotlin/patterns/creational)
     - <a href="#abstract_factory">Abstract Factory</a>
     - <a href="#factory_method">Factory Method</a>
     - <a href="#builder">Builder</a>
     - <a href="#prototype">Prototype [x]</a>
     - <a href="#singleton">Singleton [x]</a>
-- <a href="#structural_patterns">Structural Patterns (7)</a>
+- <a href="#structural_patterns">Structural Patterns (7)</a>  | [↗ sources](https://github.com/yaroslav-android/DesignPatternsSamples/tree/master/src/main/kotlin/patterns/structural)
     - <a href="#adapter">Adapter</a>
     - <a href="#bridge">Bridge</a>
     - <a href="#composite">Composite</a>
@@ -19,7 +19,7 @@
     - <a href="#facade">Facade</a>
     - <a href="#flyweight">Flyweight</a>
     - <a href="#proxy">Proxy</a>
-- <a href="#behavioral_patterns">Behavioral Patterns (11)</a>
+- <a href="#behavioral_patterns">Behavioral Patterns (11)</a>  | [↗ sources](https://github.com/yaroslav-android/DesignPatternsSamples/tree/master/src/main/kotlin/patterns/behavioral)
     - <a href="#chain_of_responsibility">Chain of Responsibility</a>
     - <a href="#command">Command</a>
     - <a href="#interpreter">Interpreter [x]</a>
